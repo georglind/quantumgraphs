@@ -1,0 +1,43 @@
+<h2>The Graph</h2>
+
+<p>Graphs are built from nodes connected by links. Each node can have a different weight, <im>\alpha_i</im>, and each link can have a different strength, <im>\beta_{ij}</im>. In addition each link may acquire a phase <im>\beta_{ij} = |\beta_{ij}| \exp(i \phi_{ij})</im>. 
+</p>
+
+<p>The simplest graph has two sites: site 1 and site 2. The Hamiltonian matrix for this quantum system (in graph theory it's called the adjacency matrix), looks like this:</p>
+
+<math>
+H = \Big(\begin{array}{cc} \alpha_1 & \beta_{12} \\ \beta_{21} & \alpha_2 \end{array} \Big)
+</math>
+
+<p>Because the Hamiltonian is <a href="https://en.wikipedia.org/wiki/Hermitian_matrix">Hermitian</a>, the links <im>\beta_{12}</im> and <im>\beta_{21}</im> are related through complex conjugation: <im>\beta_{21} = \beta_{12}^*</im>.</p>
+
+<h2>The Eigensystem</h2>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors">eigensystem</a> consists of the eigenvectors, <im>| \psi_i \rangle</im>, and their corresponding eigenvalues, <im>E_i</im>, given by,</p>
+
+<math>
+ H |\psi_i \rangle = E_i |\psi_i \rangle
+</math>
+
+<p>Note that bands are not included in the Hermitian Hamiltonian and hence do <em>not</em> show up in the eigensystem.</p>
+
+<p>Hermitian matrices always have real eigenvalues, and if all the elements of the Hermitian matrix are real, the eigenvectors will also be real. However, if the Hermitian matrix has complex entries, then the eigenvectors will almost certainly also be complex.</p>
+
+<p>If two eigenvalues share the same value they are <em>degenerate</em>. For degenerate eigenvalues the corresponding eigenvectors are not uniquely defined, and if one wants to work with each eigenvector individually all degenerate eigenvectors must be properly symmetrized.</p>
+
+<p>The app uses the <a href="https://en.wikipedia.org/wiki/Jacobi_eigenvalue_algorithm">Jacobi algorithm</a>, which works well for small matrices and gives reasonably well symmetrized eigenvectors. The app does <em>not</em> explicitly symmetrize the eigenvectors, so (some of) the degenerate eigenvectors cannot be considered in isolation.</p>
+
+<p class="qg_warning">Beware. Degenerate eigenvectors are not explicitly symmetrized, and can therefore not be considered separately.</p>
+
+<h2>The Eigenspectrum Widget</h2>
+
+<p>The Eigenspectrum widget calculates the eigensystem for the current graph synchronously and plots the real eigenvalues. By selecting an eigenvalue the corresponding eigenvector is shown overlaid on the graph. The overlay can be explicitly toggled with a button:</p>
+
+<p class="centering"><a class="qg_model_layers_spectrum"></a></p>
+
+<p>The overlay shows the size of the eigenvector on each site through the size of the overlaid circle and it also explicitly prints its value on the top.</p>
+
+<p>The phase of the eigenvector is shown both though the fill color of the circle as well as small dot on the periphery. Red translates to a phase of <im>0</im>, purple is <im>\pi/2</im>, turquoise is <im>\pi</im>, and green is <im>3\pi/2</im>.</p>
+
+<p class="centering"><img src="./assets/img/docs/colorwheel.png" /></p>
+

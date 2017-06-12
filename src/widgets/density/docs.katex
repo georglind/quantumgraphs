@@ -1,0 +1,28 @@
+<h2>The density</h2>
+
+<p>Our starting point is the <a>eigenfunctions</a> of the isolated graph (without bands attached). Fill those eigenfunctions &mdash; or orbitals &mdash; with electrons such that orbital <im>j</im> has <im>n_j</im> electrons (but at most two per orbital). The orbital <im>j</im> has the weight <im>|\psi^j_i|^2</im> on site <im>i</im>, and the total electron density on each site is given by the sum over all such densities:</p>
+
+<math>
+\rho_i = \langle c^{\dagger}_i c_i \rangle = \sum_{j} n_j |\psi^j_i|^2.
+</math>
+
+<h2>The density widget</h2>
+
+<p>For any given electron distribution the widget shows this density overlaid on the graph. The filling can be increased or decreased by pressing the "+" or "-" buttons. The filling of each individual level can also be manipulated separately by clicking the level.</p>
+
+<p>The density is shown as filled circles with the radius proportional to the filling. The local density is also written on top of each circle. The density overlay can also be toggled by the button: </p>
+
+<p class="centering"><a class="qg_model_layers_density"></a></p>
+
+<p>The half filled ground state density can easily be accessed through the &half;  button.</p>
+
+<p class="qg_warning">Beware: Since degenerate eigenfunctions (eigenfunctions sharing the same eigenenergy) are not explicitly symmetrized, you should not trust densities arising from filling the degenerate eigenfunctions in an uneven way.</p>
+
+<h2>Chemistry</h2>
+
+<p>In conjugated hydrocarbons each carbon site contribute with a single valence electron, meaning that there is as many electrons as <im>\pi</im>-orbitals. This configuration is referred to as half-filling (since there is room for double the number of electrons in the orbitals).</p>
+
+<p>You can easily access the half-filled ground state of the graph using the &half; shortcut.</p>
+
+<p>Note that all <a href="https://en.wikipedia.org/wiki/Alternant_hydrocarbon">alternant</a> graphs have exactly one electron per site in this half-filled ground state, and this means that ionic charges and electronic charges exactly counteract each other. Non-alternant graphs usually have uneven electron distributions. This gives the resulting molecule a larger effective dipole, because the electronic charges are distributed differently than the ionic charge.</p>
+

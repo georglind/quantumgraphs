@@ -1,0 +1,324 @@
+/*
+	$$\      $$\                 $$\           $$\
+	$$$\    $$$ |                $$ |          $$ |
+	$$$$\  $$$$ | $$$$$$\   $$$$$$$ | $$$$$$\  $$ |
+	$$\$$\$$ $$ |$$  __$$\ $$  __$$ |$$  __$$\ $$ |
+	$$ \$$$  $$ |$$ /  $$ |$$ /  $$ |$$$$$$$$ |$$ |
+	$$ |\$  /$$ |$$ |  $$ |$$ |  $$ |$$   ____|$$ |
+	$$ | \_/ $$ |\$$$$$$  |\$$$$$$$ |\$$$$$$$\ $$ |
+	\__|     \__| \______/  \_______| \_______|\__|
+
+*/
+
+.qg_model {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #f9fafc;
+	overflow: hidden;
+	user-select: none;
+}
+
+.qg_movable .qg_model_stage {
+	cursor: move;
+}
+
+.qg_model_stage {
+	/*height: 446px;*/
+	cursor: pointer;
+}
+
+/* Model draw menu */
+
+.minimized .qg_model_draw_menu {
+	display: none;
+}
+
+.qg_model_draw_menu{
+	position: absolute;
+	padding: 0;
+	z-index: 10;
+}
+
+.qg_model_draw_menu .qg_toggle, .qg_model_draw_menu .qg_toggle:hover  {
+	/*background-color: #ffab22;*/
+	/*background-color: #eee;*/
+	background-color: #f5f5f5;
+	border-color: #ffab22;
+	/*background-color: transparent;*/
+}
+
+
+/* message menu */
+
+.qg_model_message {
+	position: absolute;
+	top: 6px;
+	height: 42px;
+	left: 56px;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+/*.minimized .qg_model_message {
+	left: 6px;
+}*/
+
+/* Model layers */
+
+.qg_model_layers_menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	height: 42px;
+} 
+
+.qg_model_layers_menu a {
+	margin: 0;
+	/*background-color: #e5e5e5;*/
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+}
+
+.qg_model_layers_menu a:hover {
+	border-color: #ffd022;
+	background-color: #f5f5f5;
+}
+
+.qg_model_layers_menu a.qg_toggle, .qg_model_layers_menu a.qg_toggle:hover  {
+	background-color: #f5f5f5;
+	border-color: #ffab22;
+}
+
+.qg_model_layers_values {
+	background: transparent url('../img/modelvalues.png') no-repeat center center;
+	width: 42px;
+	height: 39px;
+	padding: 0;
+	display: inline-block;
+}
+
+
+
+/* Model view menu */
+
+.qg_model_view_menu {
+	position: absolute;
+	bottom: 2px;
+	left: 2px;
+	z-index: 10;
+}
+
+.qg-icon-site { background: transparent url('../img/controls-01.png') no-repeat center center; }
+.qg-icon-carbon { background: transparent url('../img/atoms-01.png') no-repeat center center; }
+.qg-icon-nitrogen { background: transparent url('../img/atoms-02.png') no-repeat center center; }
+.qg-icon-oxygen { background: transparent url('../img/atoms-03.png') no-repeat center center; }
+.qg-icon-sulphur { background: transparent url('../img/atoms-04.png') no-repeat center center; }
+.qg-icon-band { background: transparent url('../img/controls-02.png') no-repeat center center; }
+.qg-icon-link { background: transparent url('../img/controls-03.png') no-repeat center center; }
+
+
+/*
+	$$$$$$$$\      $$\ $$\   $$\
+	$$  _____|     $$ |\__|  $$ |
+	$$ |      $$$$$$$ |$$\ $$$$$$\    $$$$$$\   $$$$$$\
+	$$$$$\   $$  __$$ |$$ |\_$$  _|  $$  __$$\ $$  __$$\
+	$$  __|  $$ /  $$ |$$ |  $$ |    $$ /  $$ |$$ |  \__|
+	$$ |     $$ |  $$ |$$ |  $$ |$$\ $$ |  $$ |$$ |
+	$$$$$$$$\\$$$$$$$ |$$ |  \$$$$  |\$$$$$$  |$$ |
+	\________|\_______|\__|   \____/  \______/ \__|	
+*/
+
+
+.qg_model_submenu {
+	position: absolute;
+	height: 0;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	/*border-top: 3px solid #ffab22;*/
+	background-color: #f5f5f5;
+	text-align: center;
+	transition: all .2s linear;
+}
+
+.qg_model_editor input, .qg_model_editor_big input{
+	border: 1px solid #ddd;
+}
+
+.qg_model_editor {
+	height: 90px;
+	width: 100%;
+	font-size: 10pt;
+	text-align: center;
+	z-index: 10;
+	overflow: visible;
+}
+
+.qg_model_editor_slider, .qg_model_editor_slider, .qg_model_editor_circular, .qg_model_editor_buttons {
+	display: inline-block;
+	height: 90px;
+	vertical-align: top;
+}
+
+.qg_model_editor_title {
+	display: none;
+}
+
+.qg_model_editor_label {
+	display: inline-block;
+	max-width: 20px;
+	width: 10%;
+	font-size: 16px;
+	min-width: 3em;
+	margin-top: 10px;
+	text-align: center;
+}
+/*
+{
+	display: inline-block;
+	margin: 4px;
+	width: 140px;
+	vertical-align: top;
+}
+*/
+.qg_model_editor_slider .qg_slider {
+	max-width: 400px;
+	width: 120px;
+}
+
+.qg_model_editor_slider .qg_slider_show {
+	width: 50%;
+	font-size: 16px;
+	padding: 2px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.qg_model_editor .noUi-value {
+	display: none;
+}
+
+.qg_model_editor_circular {
+	width: 110px;
+	height: 120px;
+}
+
+.qg_model_editor .qg_circular {
+	margin: 8px 10px;
+}
+
+.qg_model_editor_buttons {
+	width: 70px;
+	margin-top: 5px;
+}
+
+.qg_model_editor_remove, .qg_model_editor_flip {
+	margin-top: 3px;
+}
+
+/* medium */
+
+html .qg_model_editor_med .qg_model_editor_title {
+	display: none;
+}
+
+
+/* lots of room*/
+
+.qg_model_editor_big { 
+	height: 80px; 
+	width: 100%;
+	font-size: 10pt;
+	/*background-color: #fafafa;*/
+	text-align: center;
+	z-index: 10;
+	overflow: visible;
+}
+
+
+.qg_model_editor_big .qg_model_editor_title {
+	display: inline-block;
+	width: 80px;
+	font-size: 16px;
+	margin: 10px 0;
+	/*vertical-align: top;*/
+}
+
+.qg_model_editor_big .qg_model_editor_slider {
+	width: 200px;
+	height: 80px;
+}
+
+.qg_model_editor_big .qg_slider {
+	width: 130px;
+	float: left;
+	margin-top: 15px;
+}
+
+.qg_model_editor_big .qg_slider_show {
+	float: right;
+	width: 50px;
+} 
+
+.qg_model_editor_big .noUi-value {
+	display: block;
+}
+
+.qg_model_editor_big .qg_model_editor_circular {
+	height: 80px;
+}
+
+.qg_model_editor_big .qg_model_editor_buttons {
+	width: 105px;
+	height: 80px;
+}
+
+.qg_model_editor_big .qg_model_editor_remove, .qg_model_editor_big .qg_model_editor_flip {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.qg_model_editor_big .qg_circular {
+	margin: -16px 10px;
+}
+
+/* unused menu stuff */
+.qg_model_editor_menu {
+	display: inline-block;
+}
+
+.qg_model_editor_menu a {
+	margin: 0 6px 0 0;
+	background-color: #e5e5e5;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	display: inline-block;
+}
+
+.qg_model_editor_menu a:hover {
+	border-color: #c0c0c0;
+}
+
+.qg_model_editor_menu a.qg_toggle, .qg_model_editor_menu a.qg_toggle:hover  {
+	border-color: #c0c0c0;
+	background-color: #c0c0c0;
+}
+
+.qg_model_bond_single {
+	background: transparent url('../img/controls-05.png') no-repeat center center;
+}
+
+.qg_model_bond_double {
+	background: transparent url('../img/controls-04.png') no-repeat center center;
+}
+
+.qg_model_bond_triple {
+	background: transparent url('../img/controls-06.png') no-repeat center center;
+}

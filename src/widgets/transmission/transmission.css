@@ -1,0 +1,99 @@
+/*
+	$$$$$$$$\                                                   $$\                     $$\
+	\__$$  __|                                                  \__|                    \__|
+	   $$ | $$$$$$\  $$$$$$\  $$$$$$$\   $$$$$$$\ $$$$$$\$$$$\  $$\  $$$$$$$\  $$$$$$$\ $$\  $$$$$$\  $$$$$$$\
+	   $$ |$$  __$$\ \____$$\ $$  __$$\ $$  _____|$$  _$$  _$$\ $$ |$$  _____|$$  _____|$$ |$$  __$$\ $$  __$$\
+	   $$ |$$ |  \__|$$$$$$$ |$$ |  $$ |\$$$$$$\  $$ / $$ / $$ |$$ |\$$$$$$\  \$$$$$$\  $$ |$$ /  $$ |$$ |  $$ |
+	   $$ |$$ |     $$  __$$ |$$ |  $$ | \____$$\ $$ | $$ | $$ |$$ | \____$$\  \____$$\ $$ |$$ |  $$ |$$ |  $$ |
+	   $$ |$$ |     \$$$$$$$ |$$ |  $$ |$$$$$$$  |$$ | $$ | $$ |$$ |$$$$$$$  |$$$$$$$  |$$ |\$$$$$$  |$$ |  $$ |
+	   \__|\__|      \_______|\__|  \__|\_______/ \__| \__| \__|\__|\_______/ \_______/ \__| \______/ \__|  \__|	
+*/
+
+.qg_transport {
+	position: absolute;
+	top: 38px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	/*background-color:#f8f9f8;*/
+}
+
+.qg_transport h3 {
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 13pt;
+	font-weight: normal;
+}
+
+.qg_transport_plot {
+	display: block;
+	margin: 0 auto;
+	color: #778291;
+}
+
+.qg_transport b {
+	display: block;
+	font-size: 11pt;
+	margin: 0;
+	padding: 0;
+	color: #f9fafc;
+	text-align: center;
+	font-weight: normal;
+	position: absolute;
+	bottom: -4px;
+	right: 2px;
+	width: 20px;
+	background-color: #324258;
+	z-index: 10;
+}
+
+.qg_transport_model {
+	border-radius: 5px;
+	padding: 15px 0;
+	width: 220px;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14pt;
+	background-color: #ddd;
+}
+
+.qg_transport_choose_anchors {
+	text-align: center;
+	padding: 10px;
+}
+
+.qg_transport_controls {
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.qg_transport_controls input, .qg_transport_controls select {
+	font-size: 11pt;
+}
+
+.qg_transport_cut {
+	height: 100px;
+	padding: 0 20px;
+}
+
+.qg_transport_cut_slider {
+	display: inline-block;
+	width: 16%;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+.qg_transport_cut_show{
+	display: inline-block;
+	width: 40px;
+	padding: 4px;
+	border: 0;
+	/*width: 50%;*/
+}

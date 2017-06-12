@@ -1,0 +1,40 @@
+/*
+	$$\   $$\            $$\
+	$$$\  $$ |           $$ |
+	$$$$\ $$ | $$$$$$\ $$$$$$\    $$$$$$\   $$$$$$$\
+	$$ $$\$$ |$$  __$$\\_$$  _|  $$  __$$\ $$  _____|
+	$$ \$$$$ |$$ /  $$ | $$ |    $$$$$$$$ |\$$$$$$\
+	$$ |\$$$ |$$ |  $$ | $$ |$$\ $$   ____| \____$$\
+	$$ | \$$ |\$$$$$$  | \$$$$  |\$$$$$$$\ $$$$$$$  |
+	\__|  \__| \______/   \____/  \_______|\_______/	
+*/
+
+.qg_notes {
+	position: absolute;
+	top: 42px;
+	left: 0;
+	padding: 10px;
+	margin: 0 10px;
+	background-color: #435268;
+	color: #333;
+	line-height: 1.2em;
+	border: 0;
+	overflow: hidden;
+}
+
+.qg_notes textarea {
+	display: block;
+	width: 204px;
+	height: 170px;
+	font-size: 14px;
+	line-height: 1.3em;
+	border: 0;
+	padding: 0;
+	color: #f9fafc;
+	background: transparent;
+}
+
+.qg_notes textarea:focus {
+	-webkit-outline: none;
+	outline: none;
+}

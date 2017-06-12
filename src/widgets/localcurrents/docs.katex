@@ -1,0 +1,49 @@
+<h2>The Coupled Graph</h2>
+
+<p>A general setup consisting of a graph coupled to multiple bands is described by the total Hamiltonian, <im>H = H_{\text{graph}} + H_{\text{bands}} + V</im>.</p>
+
+<math>
+\begin{aligned}
+ H_{\text{graph}} &= \sum_{i} \alpha_i \hat{b}^\dagger_i \hat{b}_i + \sum_{\langle i, j\rangle} (\beta_{ij} \hat{b}^\dagger_i \hat{b}_j + h.c.)
+\\
+H_{\text{bands}} &= \sum_{\sigma} \int dE\, E \, \hat{a}_\sigma^\dagger (E) \hat{a}_\sigma (E) 
+\\
+V &= \sum_n (g_{\sigma_n, i_n} \hat{a}^\dagger_{\sigma_n} \hat{b}_{i_n} + h.c.)
+\end{aligned}
+</math>
+<p>Here <im>\hat{b}^\dagger_i</im> creates a particle on node <im>i</im> of the graph, while <im>\hat{a}_\sigma^\dagger (E)</im> creates a particle in the band <im>\sigma</im> with energy <im>E</im>. Here h.c. stands for hermitian conjugate.</p>
+
+<p>Each band may be coupled to several nodes on the graph, and each coupling is characterized by the coupling strength <im>g_{\sigma_n, i_n}</im>. For brevity we also need the general coupling from each band, <im>\sigma</im>,
+<math>
+	\tilde{b}^\dagger_\sigma = \sum_n \delta_{\sigma, \sigma_n} g_{\sigma_n, i_n}^* \hat{b}_{i_n}^\dagger
+</math>
+This allow us to write the so called coupling self-energy, <im>\Sigma = \sum_{\sigma} \Sigma_{\sigma}</im>, where</p>
+<math>
+\Sigma_{\sigma} = - i \pi \tilde{g}^\dagger_{\sigma} \tilde{g}_\sigma
+</math>
+<p>Here, the self-energy includes the effect the attached bands has on the particles inhabiting our graph.</p>
+
+<h2>The Local Currents</h2>
+
+<p>The local current describe the local particle current along each of the links of the graph arising when a particle travels from one or more bands to others.</p>
+
+<p>A band supports particle states at many different energies, and we can separate the local currents from each of those energies, <im>E</im>, assuming that particles only originate from a single band, and not from any others.</p>
+
+<p>The local current can be expressed through the lesser Green's function, which in the case of single source band, <im>s</im>, takes the form,</p>
+<math>
+	G^< (E) = i G^R (E) \Sigma_s G^A (E)
+</math>
+The advanced Green's function can be derived from the retarded Green's function, <im>G^{A} (E) = (G^{R} (E))^\dagger</im>, while the retarded Green's function is defined as, 
+<math>
+	G_{ij}^R (E) = \langle 0 | \hat{b}_i \frac{1}{E - H - \Sigma} \hat{b}^\dagger_j | 0 \rangle
+</math>
+The local current from node <im>i</im> to <im>j</im> is then calculated as:
+<math>
+	K_{ij} (E) = \beta_{ij} G^<_{ji} {E} - \beta_{ji} G^{<}_{ij} (E).
+</math>
+
+<h2>The Local Currents Widget</h2>
+
+<p>The widget allow you to choose one input band from a menu toggled by clicking the "?" icon. The incoming energy can be tuned using the slider at the bottom of the widget.</p>
+
+<p>The local currents along the links in the graph is shown as directed arrows. The size of the arrow reflects the size of the current and the orientation define its direction. The arrows are colored blue when pointing in directions <im>[45\degree, 225\degree]</im> and red otherwise.</p>

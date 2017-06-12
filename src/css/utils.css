@@ -1,0 +1,35 @@
+/*
+	$$\   $$\   $$\     $$\ $$\
+	$$ |  $$ |  $$ |    \__|$$ |
+	$$ |  $$ |$$$$$$\   $$\ $$ | $$$$$$$\
+	$$ |  $$ |\_$$  _|  $$ |$$ |$$  _____|
+	$$ |  $$ |  $$ |    $$ |$$ |\$$$$$$\
+	$$ |  $$ |  $$ |$$\ $$ |$$ | \____$$\
+	\$$$$$$  |  \$$$$  |$$ |$$ |$$$$$$$  |
+	 \______/    \____/ \__|\__|\_______/	
+*/
+
+.qg_togglebutton {
+	padding: 8px 10px;
+	margin: 0 0 0 4px;
+	font-family: verdana;
+	font-size: 9pt;
+	line-height: 1em;
+	display: inline-block;
+	border-radius: 2px;
+	cursor: pointer;
+	position: relative;
+	background-color: #ccc;
+	transition: .2s ease-in-out;
+	color: black;
+}
+
+.qg_togglebutton:hover {
+	background-color: #ddd;
+}
+
+.qg_toggle, .qg_toggle:hover {
+	background-color: #FFDC00;
+	color: black;
+	font-weight: bold;
+}

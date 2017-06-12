@@ -1,0 +1,75 @@
+<div class="centering">
+<a name="intro"></a>
+<p><span>Q</span>uantum graphs are built from nodes <span class="icon-graphnode qg-icon"> </span> that are connected with links <span class="icon-graphlink qg-icon"></span>. Nodes can have different weights, and links can have different strengths.</p>
+
+<p><span>T</span>he app lets you draw nodes and links, and adjust the node weights and link strengths. The eigenfunctions are calculated on the fly, and shown overlaid on your graph, or as a table of orbitals. You can also attach your graph to wide bands <span class="icon-graphnode qg-icon yellow-text" style="font-size: 16pt; color: #FFDC00"></span> and compute the transmission through your graph.</p>
+<p><span>T</span>ry it out straightaway! Click the canvas to draw a node, connect two nodes by selecting them, and add new widgets by clicking the <span class="qg-icon">&nbsp;+&nbsp;</span>. From the import menu you can also just import chains, rings or square lattices.<p>
+<p><span>E</span>njoy yourself, and if you have comments or questions, you are welcome to <a href="contact.html">contact me</a>.</p>
+</div>
+
+<div id="qg">
+	<div class="qg_loading">
+		Application loading&hellip;<br/><br/>
+		<span class="icon-spin3 animate-spin"></span>
+	</div>
+</div>
+<div class="qg_hidden" style="text-align: center"><a class="plus" id="plus">+</a></div>
+
+<div class="centering">
+
+<h2>Quantum mechanics</h2>
+
+<p>The tight-binding approximation assumes that a given quantum system can be described well by considering discrete quantum states only.</p>
+
+<p> If the quantum states are located somewhere in physical space they are called orbitals, and due to their kinetic energy, particles can hop from one orbital to the other.</p>
+
+<p>In the quantumgraphs app, the weights signify the potential energy a particle has when occupying a given site. Links between two sites signify a kinetic energy overlap, and the stronger the link, the greater the kinetic transfer between two such nodes.</p>
+
+
+<h2>The Hückel method</h2>
+
+<p><span>Q</span>uantum graphs are especially suited for the chemistry of conjugated hydrocarbons. Conjugated molecules are usually flat, and the valence electrons occupy the p<sub>z</sub>-orbitals, which stick out perpendicular to the molecular plane. Due to kinetic energy overlap between neighbor p<sub>z</sub>-orbitals the electrons can hop between them and delocalize over the entire molecule.<p>
+
+<p><span>T</span>he delocalized electrons spread out in the eigenfunctions of the tight-binding graph, and therefore the eigenfunctions are commonly known as molecular orbitals. The electrons can then be thought of as filling up these molecular orbitals from the bottom up with room enough for two electrons in each orbital.</p>
+
+<p><spam>S</span>uch tight-binding descriptions of the valence electronic system in conjugated hydrocarbons are known as "Hückel models" &mdash; in honor of their inventor, Erich Hückel. The Hückel method originally helped Pauling develop rules for conjugation, and paved the way for advanced molecular orbital theory. Hückel models are still used today as simple &ndash; yet useful &ndash; tools for understanding and interpreting research in current chemistry.</p>
+
+<h2>Quantum transport</h2>
+
+<p><span>M</span>ore to come...</p>
+
+<h2>Feature requests and bug reports</h2>
+
+<p>Quantumgraphs is still under active development and features are added on a regular basis. If you have feature requests or want to file a bug report, you are always welcome to <a href="contact.html">contact me</a>.</p>
+</div>
+
+<!-- scripts  -->
+<script src="assets/static/konva.min.js"></script>
+<script src="assets/js/script.min.js"></script>
+
+<!-- loading the app -->
+<script type="text/javascript">
+$().ready( function() {
+	// get wrapper
+	var wrapper = $('#qg').html('');
+	
+	// setup collections
+	c = new QG.Collection(wrapper);
+	c.setTitle('the quantumgraphs app');
+	c.addSetup();
+	c.getSetup(0).setTitle('My first graph');
+	
+	// plus
+	$('#plus').parent().removeClass('qg_hidden');
+
+	$('#plus').on('click tap', function(e){
+		c.addSetup();
+	});
+
+	// add version to header
+	if ('versions' in QG)
+	{
+		$('#version').html('version ' + QG.versions[QG.versions.length-1].n);
+	}
+});
+</script>

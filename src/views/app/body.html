@@ -1,0 +1,61 @@
+<!-- app container -->
+<div id="qg" class="qg">
+	<div class="qg_loading">
+		<div>Application loading&hellip;<br/><br/>
+		<span class="icon-spin3 animate-spin"></span></div>
+	</div>
+</div>
+<!-- load scripts -->
+<script src="assets/static/konva.min.js"></script>
+<script src="assets/js/script.min.js"></script>
+<!-- loading the app -->
+<script type="text/javascript">
+$().ready( function() {
+	// wrapper
+	// return;
+	var wrapper = $('#qg').html('');
+
+	c = new QG.Setup(wrapper, {'Setup': {'delete': false} , 'Layout': {'panel': {'maxheight': 2000}}});
+	c.fit();
+
+	var hash = window.location.hash
+
+	if (hash)
+	{
+		var setup = window.JSURL.parse(hash.substr(1))
+
+		console.log(setup)
+		if ('model' in setup)
+		{
+			content = '<div class="row"><p>There seems to be a graph attached to this link.';
+				
+			if ('title' in setup && setup['title'].length > 0)
+			{
+				content += ' It\'s name is "' + QG.Text.escape(setup['title']) + '"</p>';
+			}
+			else 
+			{
+				content += ' Unfortunately it is unnamed.</p>';
+			}
+
+			content += '<p>Do you wish to import it?</div>';
+
+			var yes = $('<a class="qg_button green">Yes</a>').on('click tap', function(e)
+			{
+				e.preventDefault();
+				c.loadFromObject(setup);
+				QG.removeDialog();
+			});
+
+			var no = $('<a class="qg_button red">No</a>').on('click tap', function(e){
+				e.preventDefault();
+				QG.removeDialog();
+			});
+
+			content = $(content).append(yes).append(no);
+
+			QG.Dialog('Import graph?', content);
+		}
+	}
+});
+</script>

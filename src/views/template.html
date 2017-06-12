@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<html lang="en" manifest="qga.appcache?a05">
+<head>
+<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<title>quantumgraphs.com</title>
+<!-- meta -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"> 
+<meta charset="utf-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=02">
+<link rel="icon" type="image/png" href="/favicon-32x32.png?v=02" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png?v=02" sizes="16x16">
+<link rel="manifest" href="/manifest.json?v=02">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=02" color="#3080e8">
+<link rel="shortcut icon" href="/favicon.ico?v=02">
+<meta name="apple-mobile-web-app-title" content="quantumgraphs">
+<meta name="application-name" content="quantumgraphs">
+<meta name="theme-color" content="#3080e8">
+
+<!-- analytics -->
+<script> 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92107333-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- scripts -->
+<script src="assets/static/jquery-3.1.1.min.js"></script>
+<!-- styles -->
+<link href="assets/css/styles.min.css" rel="stylesheet" type="text/css">
+<!--[if IE 7]><link rel="stylesheet" href="assets/font/css/fontello-ie7.css"><![endif]-->
+
+<!-- Cookie Consent plugin -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies","dismiss":"Close","learnMore":"Find out more","link":"https://quantumgraphs.com/cookiepolicy.html","theme":"assets/css/styles.min.css"};
+</script>
+{{#head}}
+{{{head}}}
+{{/head}}
+</head>
+<body>
+{{#menu}}
+<div class="header">
+
+<img class="logo" src='./assets/img/quantumgraphs-white-logo.png' alt="the quantumgraphs logo" />
+{{#version}}
+<p id="version" class="small">&nbsp;</p>
+{{/version}}
+{{#tagline}}
+<p>Minimal models for exploring<br/> the quantum nature of our world</p>
+{{/tagline}}
+
+<div class="menu">
+{{{menu}}}
+</div>
+</div>
+{{/menu}}
+
+{{{body}}}
+
+{{#footer}}
+<!-- footer -->
+<div class="footer">
+	<p>
+	<a href="./app.html">App</a> &middot; 
+	<a href="./contact.html">Contact</a> &middot; 
+	<a href="./about.html">About</a> &middot;
+	<a href="./cookiepolicy.html">Cookie policy</a>
+	</p>
+</div>
+{{/footer}}
+</body>
+</html>

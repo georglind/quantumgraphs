@@ -1,0 +1,33 @@
+<p>The atom-atom polarizability is a chemical quantity defined for the isolated molecular graph. The eigenfunctions (molecular orbitals), <im>| \psi_i \rangle</im>, and eigenenergies, <im>E_i</im>, are defined by the Schrödinger equation:</p>
+
+<math>
+H |\psi_i \rangle = E_i |\psi_i \rangle
+</math>
+
+<p>Each orbital is a vector with an entry for each node (or atom) in the graph:</p>
+
+<math>
+	|\psi_i \rangle = (\psi_i^1, \psi_i^2, \ldots, \psi_i^N)
+</math>
+
+<p>We fill those orbitals from the bottom up, with two electrons per orbital. The filling is then directly given by the highest occupied orbital, <im>m</im>.</p>
+
+<p>The atom-atom polarizability between node <im>r</im> and <im>s</im> is then given by,</p>
+
+<math>
+\pi_{r,s} = - 4 \sum_{j=1}^m \sum_{k=m+1}^N \frac{(\psi_{r}^j)^* \psi_{s}^j (\psi_{r}^k)^* \psi_{s}^k }{E_k - E_j}.
+</math>
+
+<p>The expression is taken from <a href="http://dx.doi.org/10.1063/1.4913415">Stuyver et al.</a> but generalized to handling complex orbitals.</p>
+
+<h2>The polarisability widget</h2>
+
+<p>The highest occupied orbital can be chosen from a drop down menu. Note that the polarizability is ill-defined when the highest occupied orbital and the lowest unoccupied orbital have the same energy. We circumvent this problem by automatically changing such invalid choices of the highest occupied orbital to the nearest valid one.</p>
+
+<p>Additionally choosing one atom (or node) from the other drop down menu, displays the atom-atom polarizability for this node with respect to all nodes. So choosing e.g. atom number <im>r</im> displays <im>\pi_{r,s}</im> for all nodes <im>s</im>.</p>
+
+<p>The polarizability is drawn using filled circles where the polarizability is proportional to the area of the circle. The chosen atom <im>r</im> has been filled using a netural color, leaving only a ring. The sign is encoded in the color of the orbital with red signifying a positive value and blue (cyan) a negative value.</p>
+
+<h2>Chemistry</h2>
+
+<p>You can easily access the half-filled ground state of the graph using the &half; shortcut next to the orbital drop down menu.</p>

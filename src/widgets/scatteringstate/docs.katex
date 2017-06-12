@@ -1,0 +1,46 @@
+<h2>The Coupled Graph</h2>
+
+<p>A general setup consisting of a graph coupled to multiple bands is described by the total Hamiltonian, <im>H = H_{\text{graph}} + H_{\text{bands}} + V</im>.</p>
+
+<math>
+\begin{aligned}
+ H_{\text{graph}} &= \sum_{i} \alpha_i \hat{b}^\dagger_i \hat{b}_i + \sum_{\langle i, j\rangle} (\beta_{ij} \hat{b}^\dagger_i \hat{b}_j + h.c.)
+\\
+H_{\text{bands}} &= \sum_{\sigma} \int dE\, E \, \hat{a}_\sigma^\dagger (E) \hat{a}_\sigma (E) 
+\\
+V &= \sum_n (g_{\sigma_n, i_n} \hat{a}^\dagger_{\sigma_n} \hat{b}_{i_n} + h.c.)
+\end{aligned}
+</math>
+<p>Here <im>\hat{b}^\dagger_i</im> creates a particle on node <im>i</im> of the graph, while <im>\hat{a}_\sigma^\dagger (E)</im> creates a particle in the band <im>\sigma</im> with energy <im>E</im>. Here h.c. stands for hermitian conjugate.</p>
+
+<p>Each band may be coupled to several nodes on the graph, and each coupling is characterized by the coupling strength <im>g_{\sigma_n, i_n}</im>. For brevity we also need the general coupling from each band, <im>\sigma</im>,
+<math>
+	\tilde{b}^\dagger_\sigma = \sum_n \delta_{\sigma, \sigma_n} g_{\sigma_n, i_n}^* \hat{b}_{i_n}^\dagger
+</math>
+This allow us to write the so called coupling self-energy, <im>\Sigma = \sum_{nm} \Sigma_{nm}</im>, where</p>
+<math>
+\Sigma_{\sigma} = - i \pi \tilde{g}^\dagger_{\sigma} \tilde{g}_\sigma
+</math>
+<p>The self-energy here includes the effect the attached bands has on the on particles inhabiting our graph.</p>
+
+<h2>The Scattering State</h2>
+
+<p>In a wide band a particle with a specific energy, <im>E</im>, can be pictured as a wave packet with a well-defined wave-length traveling along a one-dimensional continuum.</p>
+
+<p>When such a wave packet impacts the graph the wave-function spreads out over the graph, before leaving the graph thorugh any of the attached bands.</p>
+
+<p>We can calculate this wave-function in the limit where the width of the wave-packet goes to infinity. In fact this is exactly described by retarded Green's function. Let us call the band where the wave originates for the source band or <im>s</im> band; then the retarded Green's function on any of the <im>i</im> nodes looks like this:
+
+<math>
+ G^R_{i} = - 2 \pi i \langle 0 | \hat{b}_i \frac{1}{E - H - \Sigma} \tilde{b}^\dagger_s | 0 \rangle.
+</math>
+
+<h2>The Scattering State Widget</h2>
+
+<p>The widget allow you to choose the input band from a menu toggled by clicking the "?" icon. The incoming energy can be tuned using the slider at the bottom of the widget.</p>
+
+<p>The phase of the scattering state on each node in the graph is shown using the usual colorwheel, also shown in the top left corner of the widget. Red translates to a phase of <im>0</im>, purple is <im>\pi/2</im>, turquoise is <im>\pi</im>, and green is <im>3\pi/2</im>.</p>
+
+<p class="centering"><img src="./assets/img/docs/colorwheel.png" /></p>
+
+

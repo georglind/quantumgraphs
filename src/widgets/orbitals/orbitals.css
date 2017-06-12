@@ -1,0 +1,39 @@
+/*
+	 $$$$$$\            $$\       $$\   $$\               $$\
+	$$  __$$\           $$ |      \__|  $$ |              $$ |
+	$$ /  $$ | $$$$$$\  $$$$$$$\  $$\ $$$$$$\    $$$$$$\  $$ | $$$$$$$\
+	$$ |  $$ |$$  __$$\ $$  __$$\ $$ |\_$$  _|   \____$$\ $$ |$$  _____|
+	$$ |  $$ |$$ |  \__|$$ |  $$ |$$ |  $$ |     $$$$$$$ |$$ |\$$$$$$\
+	$$ |  $$ |$$ |      $$ |  $$ |$$ |  $$ |$$\ $$  __$$ |$$ | \____$$\
+	 $$$$$$  |$$ |      $$$$$$$  |$$ |  \$$$$  |\$$$$$$$ |$$ |$$$$$$$  |
+	 \______/ \__|      \_______/ \__|   \____/  \_______|\__|\_______/	
+*/
+
+.qg_orbitals {
+	overflow-y: scroll;
+	text-align: center;
+	/*max-width: 666px;*/
+	/*height: 412px;*/
+}
+
+.qg_orbitals_level {
+	display: inline-block;
+	text-align: center;
+}
+
+.qg_orbitals_orbital {
+	height: 140px;
+	width: 220px;
+	margin: 0 auto;
+}
+
+.qg_orbitals_level .qg_orbitals_text {
+	height: 30px;
+	width: 220px;
+	line-height: 30px;
+ 	text-align: center;
+}
+
+.qg_blurred .qg_orbitals_level {
+	opacity: .5;
+}

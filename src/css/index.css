@@ -1,0 +1,117 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-image: url('../img/old_mathematics.png');
+	background-repeat: repeat;
+	background-attachment: fixed;*/
+	font-size: 10pt;
+	line-height: 1.7em;
+	padding: 0;
+	margin: 0;
+	color: #444;
+}
+
+.header {
+	background-color: #3080E8;
+	color: #f9fafc;
+	/*border-bottom: 2px solid #999;*/
+	height: 24em;
+	margin-bottom: 2em;
+	/*font-size: 20pt;*/
+	font-size: 1.2em;
+	line-height: 1.6em;
+	text-align: center;
+	/*text-transform: lowercase*/
+}
+
+@media screen and (min-width: 500px) { 
+	body {font-size: 12pt;}
+
+	.header { 
+		font-size: 1.6em;
+		line-height: 1.8em;
+	}
+}
+
+.menu {
+	margin: 1.5em 0;
+}
+
+.menu-item, .menu-item-border {
+	text-decoration: none;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	color: white;
+	/*opacity: .9;*/
+	background-color: #4090F8;
+	transition: background-color 700ms linear, box-shadow 150ms linear;
+	display: inline-block;
+	margin: 10px;
+	border-radius: 2px;
+}
+
+.menu-item-border {
+	border: 1px solid white;
+}
+
+.menu-item:hover, .menu-item-border:hover {
+	opacity: 1;
+	/*transition: all .2s ease-in-out;*/
+	box-shadow: 2px 6px 18px #324258;
+	background-color: #50A0F8;
+	border-color: #50A0F8;
+}
+
+.logo
+{
+	width: 800px;
+	max-width: 90%;
+	height: auto;
+	background-position: center center;
+	margin: 10rem 0 0;
+	font-weight: bold;
+	font-size: 60pt;
+	line-height: 60pt;
+}
+
+.footer {
+	padding: 2em 15px;
+	margin-top: 2rem;
+	background-color: #f5f5f5;
+	color: #888;
+}
+
+.footer a {
+	color: #444;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+
+.centering {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+p, h1, h3, ul, ol {
+	max-width: 600px;
+	margin: 0 auto 1em;
+}
+
+h2 {
+	font-size: 2em;
+	max-width: 600px;
+	margin: 1em auto 1em;
+	/*text-transform: lowercase;*/
+	text-align: center;
+}
+
+/*p > span {*/
+	/*font-family: Times, serif;*/
+	/*font-size: 20pt;*/
+	/*font-weight: bold;*/
+/*}*/
+

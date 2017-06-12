@@ -1,0 +1,62 @@
+<p>The following is a rather precise derivation of the transmission function which demands some knowledge of <a href="https://en.wikipedia.org/wiki/Operator_algebra">operator algegra</a>, specifically <a href="https://en.wikipedia.org/wiki/Second_quantization">second quantization</a> and <a href="https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation">bra-ket notation</a>. The Transmission widget itself is described after the mathematical explanation.</p>
+
+<h2>The Coupled Graph</h2>
+
+<p>The general coupled graph is described by the Hamiltonian, <im>H = H_{\text{graph}} + H_{\text{bands}} + V</im>.</p>
+
+<math>
+\begin{aligned}
+ H_{\text{graph}} &= \sum_{i} \alpha_i \hat{b}^\dagger_i \hat{b}_i + \sum_{\langle i, j\rangle} (\beta_{ij} \hat{b}^\dagger_i \hat{b}_j + h.c.)
+\\
+H_{\text{bands}} &= \sum_{\sigma} \int dE\, E \, \hat{a}_\sigma^\dagger (E) \hat{a}_\sigma (E) 
+\\
+V &= \sum_n (g_{\sigma_n, i_n} \hat{a}^\dagger_{\sigma_n} \hat{b}_{i_n} + h.c.)
+\end{aligned}
+</math>
+<p>Here <im>\hat{b}^\dagger_i</im> creates a particle on node <im>i</im> of the graph, while <im>\hat{a}_\sigma^\dagger (E)</im> creates a particle in the band <im>\sigma</im> with energy <im>E</im>. Here h.c. stands for hermitian conjugate.</p>
+
+<p>Each band may be coupled to several nodes on the graph, and each coupling is characterized by the coupling strength <im>g_{\sigma_n, i_n}</im>. For brevity we also need the general coupling from each band, <im>\sigma</im>,
+<math>
+	\tilde{b}^\dagger_\sigma = \sum_n \delta_{\sigma, \sigma_n} g_{\sigma_n, i_n}^* \hat{b}_{i_n}^\dagger
+</math>
+This allow us to write the so called coupling self-energy, <im>\Sigma = \sum_{nm} \Sigma_{nm}</im>, where</p>
+<math>
+\Sigma_{\sigma} = - i \pi \tilde{g}^\dagger_{\sigma} \tilde{g}_\sigma
+</math>
+<p>The self-energy here includes the effect the attached bands has on the on particles inhabiting our graph.</p>
+
+<h2>The Transmission</h2>
+
+<p>The Landauer-Büttiker transmission, <im>T(E)</im>, describes how a particle with energy <im>E</im> from a source band, <im>s</im>, transmits through the graph to a drain band, <im>d</im>. When the bands are filled with particles according to some distribution functions <im>f_{s/d} (E)</im> the total particle current from source to drain is given by:</p>
+
+<math>
+	I_{sd} = \int_{-\infty}^\infty \mathrm{d}E \, f_s(E) (1 - f_d (E)) T_{sd}(E)
+</math>
+
+<p>The transmission can be calculated using either Green's functions or Scattering matrices. In the last formulation the scattering matrix element from source to drain is:</p>
+
+<math>
+	S_{sd}(E) = \delta_{sd} - 2 \pi i \langle 0 |\tilde{b}_d \frac{1}{E - H_{graph} - \Sigma} \tilde{b}^\dagger_s | 0 \rangle
+</math>
+
+<p>The transmission is then <im>T_{sd} (E) = |S_{sd} (E)|^2</im>. Note that when the source and the drain is the same band, we instead get the reflection, here losely written as <im>R_{s} \stackrel{\text{}}{=} T_{ss}</im>.</p>
+
+<h2>The transmission widget</h2>
+
+<p>In our graph the strength of the dashed line link between nodes and directly encodes <im>t = \sqrt{\pi} g</im>. </p>
+
+<p>The coupling strengths <im>\sqrt{\pi} g</im> is encoded directly in the link strengths. So when you are tuning the strength of the dashed line, you are essentially tuning <im>\sqrt{\pi} g</im>. The reason for the <im>\sqrt{\pi}</im> pre-factor follows from a desire to have <im>t = 1</im> matching the intermediate coupling strength.</p>
+
+<p>The transmission widgets allow to plot the transmission between two arbitrary bands for each energy <im>E</im>. To add a new transmission press the + icon, and choosing the relevant bands. More transmission functions can be added to the plot, and you can toggle an edit dialog simply by clicking the legend for each line.</p>
+
+<p>One can also modify the transmission plots, by cutting the functions up between two eigenlevels, <im>m \text{ and } m+1</im>, and pulling them apart by an amount, <im>\delta</im>. Mathematically we are replacing the graph Hamiltonian by the transformed operator,</p>
+<math>
+	\tilde{H}_{\text{graph}} = V^\dagger \tilde{D} V
+</math>
+Here <im>V</im> contains the usual graph eigenvectors, and 
+<math>
+	\tilde{D} = \sum_{i \leq m} (E_i - \delta/2) \hat{b}^\dagger_i \hat{b}_i + \sum_{i > m} (E_i + \delta/2) \hat{b}^\dagger_i \hat{b}_i.
+</math>
+
+<p class="qg_warning">Beware: Do not trust results obtained by cutting in between two degenerate (with the same eigenenergy) levels, since the diagonalization algorithm does not explicitly symmetrize degenerate eigenvectors.</p>
+

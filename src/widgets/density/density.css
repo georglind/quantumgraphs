@@ -1,0 +1,175 @@
+/*
+	$$$$$$$\                                $$\   $$\
+	$$  __$$\                               \__|  $$ |
+	$$ |  $$ | $$$$$$\  $$$$$$$\   $$$$$$$\ $$\ $$$$$$\   $$\   $$\
+	$$ |  $$ |$$  __$$\ $$  __$$\ $$  _____|$$ |\_$$  _|  $$ |  $$ |
+	$$ |  $$ |$$$$$$$$ |$$ |  $$ |\$$$$$$\  $$ |  $$ |    $$ |  $$ |
+	$$ |  $$ |$$   ____|$$ |  $$ | \____$$\ $$ |  $$ |$$\ $$ |  $$ |
+	$$$$$$$  |\$$$$$$$\ $$ |  $$ |$$$$$$$  |$$ |  \$$$$  |\$$$$$$$ |
+	\_______/  \_______|\__|  \__|\_______/ \__|   \____/  \____$$ |
+	                                                      $$\   $$ |
+	                                                      \$$$$$$  |
+	                                                       \______/
+*/
+
+.qg_density {
+	position: absolute;
+	width: 223px;
+	height: 185px;
+	top: 70px;
+}
+
+.qg_density .qg_axes {
+	position: absolute;
+	left: 32px;
+	top: 1px;
+}
+
+.qg_density_levels {
+	/*padding-top: 5%;*/
+	height: 100%;
+	width: 80%;
+	position: relative;
+}
+
+.qg_density_level_1, .qg_density_level_2, .qg_density_level_3, .qg_density_level_4,
+.qg_density_level_5, .qg_density_level_6, .qg_density_level_7, .qg_density_level_8,
+.qg_density_level_9, .qg_density_level_10, .qg_density_level_11, .qg_density_level_12
+{
+	position: absolute;
+	height: 3%;	
+	width: 10%;
+	overflow: visible;
+	text-align: center;
+	/*line-height: 9px;*/
+	/*background-color: #526278;*/
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.qg_density_level_1:hover, .qg_density_level_2:hover, .qg_density_level_3:hover, .qg_density_level_4:hover,
+.qg_density_level_5:hover, .qg_density_level_6:hover, .qg_density_level_7:hover, .qg_density_level_8:hover,
+.qg_density_level_9:hover, .qg_density_level_10:hover, .qg_density_level_11:hover, .qg_density_level_12:hover
+{
+	background-color: #526278;
+}
+
+
+.qg_density_level_1 {
+	left: 30%;
+
+}
+
+.qg_density_level_2 {
+	left: 44%;
+}
+
+.qg_density_level_3 {
+	left: 16%;	
+}
+
+.qg_density_level_4 {
+	left: 58%;
+}
+
+.qg_density_level_5 {
+	left: 72%;
+}
+
+.qg_density_level_6 {
+	left: 86%;
+}
+
+.qg_density_level_7, .qg_density_level_8, .qg_density_level_9, .qg_density_level_10, 
+.qg_density_level_11, .qg_density_level_12
+{
+	right: 10%;
+}
+
+.qg_density_line {
+	height: 2px;
+	margin-top: -1px;
+	background-color: #f9fafc;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	left: 0;
+}
+
+.qg_density_dot {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 50%;
+	height: 10px;
+	margin-top: -5px;
+	text-align: center;
+	line-height: 10px;
+}
+
+.qg_density_dot span {
+	height: 9px;
+	width: 9px;
+	margin: -4px 1px 0 1px;
+	border-radius: 11px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.qg_density_dot .down { background-color: #ffd022; }
+.qg_density_dot .up { background-color: #ff7422; }
+
+
+.qg_density_controls {
+	position: absolute;
+	top: 0;
+	width: 60px;
+	height: 100%;
+	right: 16px;
+}
+
+.qg_density_plus, .qg_density_minus {
+	position: absolute;
+	display: inline-block;
+	left: 0;
+	font-size: 32px;
+	line-height: 34px;
+	width: 60px;
+	text-align: center;
+	cursor: pointer;
+	color: #ccc;
+}
+
+.qg_density_n {
+	position: absolute;
+	left: 0;
+	font-size: 18px;
+	line-height: 16px;
+	width: 60px;
+	text-align: center;
+	color: #f9fafc;
+	top: 50%;
+	height: 0;
+	margin-top: -8px;
+}
+
+.qg_density_plus:hover, .qg_density_minus:hover {
+	color: #999;
+}
+
+.qg_density_plus {
+	top: 20%;
+}
+
+.qg_density_minus {
+	bottom: 20%;
+}
+
+
+.qg_model_layers_density {
+	background: transparent url('../img/densitylayer.png') no-repeat center center;
+	width: 42px;
+	height: 39px;
+	padding: 0;
+	display: inline-block;
+}

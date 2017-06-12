@@ -1,0 +1,10 @@
+<p>The starting point are the <a>eigenfunctions</a> of the isolated graph (without bands attached). Fill those eigenfunctions -- or orbitals -- with electrons such that orbital <im>j</im> has <im>n_j</im> electrons (but at most two per orbital). The orbital $j$ has the weight <im>|\psi^j_i|^2</im> on site $i$, and the total electron density on each site is given by the sum over all such densities:</p>
+
+<math>
+d_i = \langle c^{\dagger}_i c_i \rangle = \sum_{j} n_j |phi^j_i|^2.
+</math>
+
+<p>For any given electron distribution the widget shows this density overlaid on the graph.</p>
+
+<p>In conjugated hydrocarbons each carbon site contribute with a single valence electron, meaning that there is as many electrons as <im>\pi</im>-orbitals. This configuration is referred to as half-filling (since there is room for double the number of electrons in the orbitals). You can easily access the half-filled ground state of the graph using the &half; shortcut. Note that all <a href="https://en.wikipedia.org/wiki/Alternant_hydrocarbon">alternant</a> graphs have exactly one electron per site in this half-filled ground state, and this means that ionic charges and electronic charges exactly counteract each other. Non-alternant graphs usually have uneven electron distributions. This gives the resulting molecule a larger effective dipole, because the electronic charges are distributed differently than the ionic charge.</p>
+

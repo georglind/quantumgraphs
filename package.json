@@ -1,0 +1,18 @@
+{
+  "name": "quantumgraphs",
+  "version": "0.0.8",
+  "description": "App for visualizing tight-binding quantum systems.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kim G. L. Pedersen",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "katex": "^0.7.1",
+    "local-web-server": "^1.2.6",
+    "moustache": "0.0.2",
+    "strict-mode": "^1.0.1"
+  }
+}

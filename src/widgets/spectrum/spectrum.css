@@ -1,0 +1,48 @@
+/* Spectrum */
+
+.qg_spectrum {
+	position: relative;
+	padding: 10px;
+}
+
+.qg_spectrum_up, .qg_spectrum_down
+{
+	position: absolute;
+	text-align: center;
+	right: 16px;
+	z-index: 10;
+	font-size: 34px;
+	line-height: 34px;
+	cursor: pointer;
+	color: #f9fafc;
+	width: 60px;
+}
+
+.qg_spectrum_up:hover, .qg_spectrum_down:hover
+{
+	color: #888;
+}
+
+.qg_spectrum_up {
+	top: 25%;
+}
+
+.qg_spectrum_down {
+	bottom: 25%;
+}
+
+.qg_spectrum .qg_axes {
+	position: absolute;
+	left: 40px;
+	top: 20px;
+}
+
+
+
+.qg_model_layers_spectrum {
+	background: transparent url('../img/eigenlayer.png') no-repeat center center;
+	width: 42px;
+	height: 39px;
+	padding: 0;
+	display: inline-block;
+}
