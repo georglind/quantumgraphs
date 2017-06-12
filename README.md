@@ -5,4 +5,4 @@ Quantum Graphs
 
 ## Prerequisites
 
-If you wish to host your own version of the Quantum Graphs library, you must also include a set of external libraries described on [quantumgraphs.com/about](http://quantumgraphs.com/about).
+If you wish to host your own version of the quantumgraphs library, you must also include a set of external libraries described on [quantumgraphs.com/about](http://quantumgraphs.com/about).
