@@ -1,2 +1,8 @@
-# quantumgraphs
-Web app for drawing, diagonalizing, analysing discrete quantum models
+Quantum Graphs
+=============
+
+[quantumgraphs.com](http://quantumgraphs.com) is a free-to-use app for exploring tight-binding quantum systems. It includes tools for visualizing eigen orbitals, transmission functions, local currents, scattering states, and more.
+
+## Prerequisites
+
+If you wish to host your own version of the Quantum Graphs library, you must also include a set of external libraries described on [quantumgraphs.com/about](http://quantumgraphs.com/about).
